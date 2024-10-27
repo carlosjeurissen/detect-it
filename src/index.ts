@@ -32,7 +32,7 @@ const options = {
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 const noop = () => {};
 w.addEventListener && w.addEventListener('p', noop, options);
-w.removeEventListener && w.removeEventListener('p', noop, false);
+w.removeEventListener && w.removeEventListener('p', noop, !passiveOptionAccessed);
 
 export const supportsPassiveEvents: boolean = passiveOptionAccessed;
 
